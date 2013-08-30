@@ -1,0 +1,43 @@
+<!-- Carousel ================================================== -->
+<div id="myCarousel" class="carousel slide">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="https://sphotos-b.xx.fbcdn.net/hphotos-ash3/1098007_548906675157118_2116206366_n.png" alt="">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>StanceTrader</h1>
+          <p>Buy well. Sell well. Discover. </p>
+          <p><%= link_to 'Sign up today', new_user_path, class: "btn btn-large btn-primary" %></p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://sphotos-a-pao.xx.fbcdn.net/hphotos-prn1/564643_548213845226401_1356367265_n.png" alt="">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Seamless marketplace.</h1>
+          <p>It's easy to list and find your car parts on StanceTrader.</p>
+          <p><a class="btn btn-large btn-primary" href="#">Learn more</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <img src="https://sphotos-a-pao.xx.fbcdn.net/hphotos-ash3/1148851_548213695226416_1012975967_n.png" alt="">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Exciting.</h1>
+          <p>Cool story bro.</p>
+          <p><a class="btn btn-large btn-primary" href="#">Browse gallery</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+  <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div><!-- /.carousel -->
