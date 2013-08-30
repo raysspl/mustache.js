@@ -1,0 +1,14 @@
+<div id="person"></div>
+
+<script type="text/javascript">
+	var data = {
+		name_first: 'Ray',
+		name_last: 'Dipasupil',
+		companies: [
+			{ name: 'stancetrader', founded: '2012'},
+			{ name: 'candid productions', founded: '2011'}
+		]
+	};
+	var template = '<h1>{{ name_first }} {{ name_last }} </h1> {{ #companies }} <div>{{ name }} - {{ founded }}</div> {{ /companies }}';
+	$('#person').html(Mustache.to_html(template, data));
+</script>

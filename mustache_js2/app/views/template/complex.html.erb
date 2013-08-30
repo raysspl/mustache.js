@@ -1,0 +1,38 @@
+<div id="holder"></div>
+
+<script id="template" type="text/template">
+	<h1>{{ name_first }} {{ name_last }}</h1>
+	<ul>
+	{{ #films }}
+		<li>
+			{{ name }}
+		</li>
+	{{ /films }}
+	</ul>
+</script>
+
+<script id="template2" type="text/template">
+	{{ #films }}
+		{{ #display }}
+			<div>{{ name }}</div>
+		{{ /display }}
+	{{ /films }}
+	<small> - {{ name_last }}, {{ name_first }}</small>
+</script>
+
+<script type="text/javascript">
+	var information;
+	$.ajax('/template/data', {
+		success: function(data) {
+			information = data;
+			templateName = prompt('which template should we use?');
+			render(templateName);
+		}
+	})
+	function render(templateName) {
+		var template = $('#'+templateName).html();
+		var renderedHTML = Mustache.to_html(template, information);
+		$('#holder').html(renderedHTML);
+	}
+</script>
+
